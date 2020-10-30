@@ -12,6 +12,7 @@ constructor(x,y,r){
     this.ballBody=Bodies.circle(x,y,r,ballPropertyChange)
     World.add(world,this.ballBody)
     this.radius = r
+    this.image = loadImage("paper.png")
 }
 display(){
     push ()
@@ -20,8 +21,8 @@ display(){
     translate(position.x,position.y)
     rotate(angle)
     fill("blue")
-    ellipseMode(CENTER)
-    ellipse(0,0,this.radius,this.radius)
+    imageMode(CENTER)
+    image(this.image,0,0,this.radius,this.radius)
     pop ()
 
 }
